@@ -8,12 +8,14 @@ public class App
 {
     public static void main( String[] args )
     {
-        Vehicle vehicle = Vehicle
-                .builder()
-                .setMake("Ford")
-                .setModel("Mustang")
-                .build();
 
-        System.out.println( vehicle.toString() );
+        Vehicle.Builder vehicleBuilder = new Vehicle.Builder();
+
+        vehicleBuilder.setMake("asdasd")
+                        .setModel("11111");
+
+        Vehicle vehicle = vehicleBuilder.build();
+
+        System.out.println( vehicle );
     }
 }

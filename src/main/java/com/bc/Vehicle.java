@@ -2,8 +2,8 @@ package com.bc;
 
 public class Vehicle {
 
-    String make;
-    String model;
+    private String make;
+    private String model;
 
     Vehicle(Builder builder){
         this.make = builder.make;
@@ -37,8 +37,8 @@ public class Vehicle {
 
     public static class Builder implements SetMake, SetModel, FinishBuild {
 
-        String make;
-        String model;
+        private String make;
+        private String model;
 
 
         @Override
