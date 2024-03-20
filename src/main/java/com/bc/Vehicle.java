@@ -45,13 +45,13 @@ public class Vehicle {
 //        }
 
         @Override
-        public SetModel setMake(String make) {
+        public Builder<T> setMake(String make) {
             this.make = make;
             return this;
         }
 
         @Override
-        public FinishBuild setModel(String model) {
+        public Builder<T> setModel(String model) {
             this.model = model;
             return this;
         }
