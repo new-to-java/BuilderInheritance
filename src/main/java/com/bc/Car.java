@@ -1,43 +1,53 @@
 package com.bc;
 
-public class Car extends Vehicle {
-    Car(Builder builder) {
-        super(builder);
-    }
-
-//    private int yearOfManufacture;
+//public class Car extends Vehicle {
+//
+//    int engineCapacity;
+//    String fuel;
 //
 //    Car(Builder builder){
-//
 //        super(builder);
-//        this.yearOfManufacture = builder.yearOfMfg;
+//        this.engineCapacity = builder.engineCapacity;
+//        this.fuel = builder.fuel;
+//    }
+//
+//    public interface SetEngineCapacity{
+//        public SetFuel setEngineCapacity(int engineCapacity);
 //
 //    }
 //
+//    public interface SetFuel{
+//        public FinishBuild setFuel(String fuel);
 //
-//    public interface SetYearOfManufacture{
-//        FinishBuild setYearOfMfg(int yearOfMfg);
 //    }
 //
-//    public static SetMake build(){
-//        return new Builder();
+//    public interface FinishBuild{
+//        public Car build();
 //    }
 //
-//    public static class Builder extends Vehicle.Builder implements SetYearOfManufacture{
+//    public static class Builder extends Vehicle.Builder<Builder> implements SetEngineCapacity, SetFuel{
 //
-//        int yearOfMfg;
+//        int engineCapacity;
+//        String fuel;
+//
 //
 //        @Override
-//        public FinishBuild setYearOfMfg(int yearOfMfg) {
-//            this.yearOfMfg = yearOfMfg;
+//        public Car.Builder setEngineCapacity(int engineCapacity) {
+//            this.engineCapacity = engineCapacity;
 //            return this;
 //        }
 //
 //        @Override
-//        public SetModel setMake(String make){
+//        public Car.Builder setFuel(String fuel) {
+//            this.fuel = fuel;
 //            return this;
 //        }
 //
+//        @Override
+//        public Car build(){
+//            return new Car(this);
+//        }
+//
 //    }
-
-}
+//
+//}

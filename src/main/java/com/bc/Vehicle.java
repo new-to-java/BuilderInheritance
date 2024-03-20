@@ -5,7 +5,7 @@ public class Vehicle {
     private String make;
     private String model;
 
-    Vehicle(Builder builder){
+    Vehicle(Builder<?> builder){
         this.make = builder.make;
         this.model = builder.model;
     }
@@ -20,7 +20,7 @@ public class Vehicle {
     }
 
     public static SetMake builder(){
-        return new Builder();
+        return new Builder<>();
     }
 
     public interface SetMake{
@@ -40,20 +40,20 @@ public class Vehicle {
         private String make;
         private String model;
 
-        Builder<T> self(){
-            return this;
-        }
+//        Builder<T> self(){
+//            return this;
+//        }
 
         @Override
         public SetModel setMake(String make) {
             this.make = make;
-            return self();
+            return this;
         }
 
         @Override
         public FinishBuild setModel(String model) {
             this.model = model;
-            return self();
+            return this;
         }
 
         @Override
