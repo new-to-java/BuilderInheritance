@@ -35,27 +35,30 @@ public class Vehicle {
         Vehicle build();
     }
 
-    public static class Builder implements SetMake, SetModel, FinishBuild {
+    public static class Builder<T extends Builder<T>> implements SetMake, SetModel, FinishBuild {
 
         private String make;
         private String model;
 
+        Builder<T> self(){
+            return this;
+        }
 
         @Override
         public SetModel setMake(String make) {
             this.make = make;
-            return this;
+            return self();
         }
 
         @Override
         public FinishBuild setModel(String model) {
             this.model = model;
-            return this;
+            return self();
         }
 
         @Override
         public Vehicle build() {
-            return new Vehicle(this);
+            return new Vehicle( this);
         }
     }
 

@@ -9,13 +9,9 @@ public class App
     public static void main( String[] args )
     {
 
-        Vehicle.Builder vehicleBuilder = new Vehicle.Builder();
+        Vehicle vehicle = Vehicle.builder().setMake("Ford").setModel("F350").build();
 
-        vehicleBuilder.setMake("asdasd")
-                        .setModel("11111");
+        System.out.println(vehicle);
 
-        Vehicle vehicle = vehicleBuilder.build();
-
-        System.out.println( vehicle );
     }
 }
